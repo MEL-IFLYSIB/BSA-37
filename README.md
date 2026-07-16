@@ -43,26 +43,20 @@ The simulations explore urea concentrations ranging from 0 M (pure water) to 7 M
 3. Run the simulation pipeline:
   - Minimization
     ```bash
-    ```
     gmx grompp -f mdp/em.mdp -c gro/start.gro -p topol.top -o em.tpr
     gmx mdrun -deffnm em -v
     ``` 
-    ```
-
+    ```bash
   - NVT equilibration
     ```bash
-    ```
     gmx grompp -f mdp/nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
     gmx mdrun -deffnm nvt -v
     ``` 
-
   - NPT equilibration
   ```bash
-```
     gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -o npt.tpr
     gmx mdrun -deffnm npt -v
     ``` 
-
   - Production run
   ```bash
 ```
