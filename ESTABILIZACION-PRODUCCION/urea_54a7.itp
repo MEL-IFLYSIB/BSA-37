@@ -1,0 +1,75 @@
+;
+;	File 'topol.top' was generated
+;	By user: respinosa (1044)
+;	On host: iflysib17
+;	At date: Sat Mar  9 10:37:22 2019
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	           :-) GROMACS - gmx pdb2gmx, 2016.3 (double precision) (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx_mpi_d
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /home/respinosa/Documents/BSA_urea/BSA_pH-3.5
+;	Command line:
+;	  gmx_mpi_d pdb2gmx -f edit_only-urea.gro -o -p -i
+;	Force field was read from the standard GROMACS share directory
+;
+
+
+[ moleculetype ]
+; Name            nrexcl
+UREA                3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 UREA rtp UREA q  0.0
+     1          O     1   UREA     OU      1      -0.39    15.9994   ; qtot -0.39
+     2          C     1   UREA     CU      1      0.142     12.011   ; qtot -0.248
+     3          N     1   UREA    N1U      1     -0.542    14.0067   ; qtot -0.79
+     4          H     1   UREA   H11U      1      0.333      1.008   ; qtot -0.457
+     5          H     1   UREA   H12U      1      0.333      1.008   ; qtot -0.124
+     6          N     1   UREA    N2U      1     -0.542    14.0067   ; qtot -0.666
+     7          H     1   UREA   H21U      1      0.333      1.008   ; qtot -0.333
+     8          H     1   UREA   H22U      1      0.333      1.008   ; qtot 0
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     2    gb_44
+    2     3     2    gb_45
+    2     6     2    gb_45
+    3     4     2    gb_2
+    3     5     2    gb_2
+    6     7     2    gb_2
+    6     8     2    gb_2
+
+[ exclusions ]
+;    i    excluded from i
+     4      7     8
+     5      7     8
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    1     2     3     2    ga_54
+    1     2     6     2    ga_54
+    3     2     6     2    ga_53
+    2     3     4     2    ga_23
+    2     3     5     2    ga_23
+    4     3     5     2    ga_24
+    2     6     7     2    ga_23
+    2     6     8     2    ga_23
+    7     6     8     2    ga_24
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+    1     2     3     4     1    gd_15
+    1     2     6     7     1    gd_15
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3
+    1     6     3     2     2    gi_1
+    2     5     4     3     2    gi_1
+    2     8     7     6     2    gi_1
+

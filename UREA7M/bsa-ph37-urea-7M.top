@@ -1,0 +1,51 @@
+;
+;	File '4f5s_pH.top' was generated
+;	By user: ricardo (1001)
+;	On host: ricardo
+;	At date: Sun Feb  7 17:50:03 2016
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                  :-) GROMACS - gmx pdb2gmx, VERSION 5.1 (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx_mpi
+;	Data prefix:  /usr/local/gromacs
+;	Command line:
+;	  gmx_mpi pdb2gmx -f 4f5s_2.pdb -o 4f5s_pH -p 4f5s_pH -i 4f5s_pH -asp -glu -lys -arg -his
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "gromos54a7.ff/forcefield.itp"
+
+; Include chain topologies
+#include "4f5s_pH.itp"
+
+; Include chain topologies
+#include "urea_54a7.itp"
+
+; Include water topology
+#include "gromos54a7.ff/spce.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "gromos54a7.ff/ions.itp"
+
+[ system ]
+; Name
+;SERUM ALBUMIN in water
+
+[ molecules ]
+; Compound        #mols
+Protein           1
+SOL           32412 
+CL               99
+UREA           7570           
