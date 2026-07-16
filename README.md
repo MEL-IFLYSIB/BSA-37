@@ -94,5 +94,5 @@ For questions or issues, please open an issue on this repository or contact the 
 ## Authors
 
 - Y. Ricardo Espinosa
-- C. Manuel Carlevaro (@manuxch)
+- C. Manuel Carlevaro ([@manuxch](https://github.com/manuxch))
 - C. Gastón Ferrara
