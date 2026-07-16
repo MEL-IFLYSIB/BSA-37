@@ -20,18 +20,17 @@ The simulations explore urea concentrations ranging from 0 M (pure water) to 7 M
 
 - **GROMACS** version 2023.4 (or later, with compatible syntax)
 - **NVIDIA GPU** with CUDA support (for accelerated runs)
-- Standard force field files (e.g., CHARMM36m – specify if different)
+- GROMOS 54A7 force field
 
 ## Repository Contents
 
-- `topol.top` – System topology
-- `gro/` – Coordinate files for each urea concentration
-- `mdp/` – Run parameter files for:
+- `*.top` – System topology
+- `*.gro` – Coordinate files for each urea concentration
+- `*.mdp` – Run parameter files for:
   - Energy minimization
   - NVT equilibration
   - NPT equilibration
   - Production MD
-- `index.ndx` – Index file for group definitions (if used)
 
 ## Usage
 
@@ -40,7 +39,7 @@ The simulations explore urea concentrations ranging from 0 M (pure water) to 7 M
    git clone https://github.com/manuxch/bsa37-md.git
    cd bsa37-md
    ```
-2. Select the desired urea concentration folder (e.g., 1M/, 3M/, etc.).
+2. Select the desired urea concentration folder (e.g., UREA1M/, UREA3M/, etc.).
 3. Run the simulation pipeline:
   Minimization
   gmx grompp -f mdp/em.mdp -c gro/start.gro -p topol.top -o em.tpr
