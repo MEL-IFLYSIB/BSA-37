@@ -42,19 +42,19 @@ The simulations explore urea concentrations ranging from 0 M (pure water) to 7 M
    ```
 2. Select the desired urea concentration folder (e.g., 1M/, 3M/, etc.).
 3. Run the simulation pipeline:
-  # Minimization
+  Minimization
   gmx grompp -f mdp/em.mdp -c gro/start.gro -p topol.top -o em.tpr
   gmx mdrun -deffnm em -v
 
-  # NVT equilibration
+  NVT equilibration
   gmx grompp -f mdp/nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
   gmx mdrun -deffnm nvt -v
 
-  # NPT equilibration
+  NPT equilibration
   gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -o npt.tpr
   gmx mdrun -deffnm npt -v
 
-  # Production run
+  Production run
   gmx grompp -f mdp/md.mdp -c npt.gro -p topol.top -o md.tpr
   gmx mdrun -deffnm md -v
   
@@ -66,8 +66,11 @@ All simulations were performed with GROMACS 2023.4 on NVIDIA GPUs. For exact rep
 
 If you use these files in your research, please cite the original article:
 
-    Espinosa, Y. R., Carlevaro, C. M., & Ferrara, C. G. (2026). Urea-Mediated Solvent Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation at pH 3.7. arXiv preprint arXiv:2605.10444.
-    
+    Espinosa, Y. R., Carlevaro, C. M., & Ferrara, C. G. (2026). Urea-Mediated Solvent 
+    Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation 
+    at pH 3.7. arXiv preprint arXiv:2605.10444.
+
+Bibtex:
 ```bibtex
   @misc{espinosa2026,
         title={Urea-Mediated Solvent Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation at pH 3.7}, 
