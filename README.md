@@ -52,7 +52,7 @@ The simulations explore urea concentrations ranging from 0 M (pure water) to 7 M
     gmx mdrun -deffnm nvt -v
     ``` 
   - NPT equilibration
-  ```bash
+    ```bash
     gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -o npt.tpr
     gmx mdrun -deffnm npt -v
     ``` 
