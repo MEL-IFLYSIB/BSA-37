@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use these configuration files or scripts in your research, please cite the original article as indicated below."
+title: "Urea-Mediated Solvent Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation 
+at pH 3.7"
+authors:
+  - family-names: "Espinosa"
+    given-names: "Yanis R."
+  - family-names: "Carlevaro"
+    given-names: "C. Manuel"
+  - family-names: "Ferrara"
+    given-names: "C. Gastón"
+url: "https://github.com/MEL-IFLYSIB/BSA-37"
+preferred-citation:
+  type: article
+  title: "Urea-Mediated Solvent Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation 
+at pH 3.7"
+  authors:
+    - family-names: "Espinosa"
+      given-names: "Yanis R."
+    - family-names: "Carlevaro"
+      given-names: "C. Manuel"
+    - family-names: "Ferrara"
+      given-names: "C. Gastón"
+  year: 2026
+  journal: "arXiv preprint arXiv:2605.10444"
+  url: "https://arxiv.org/abs/2605.10444"
+  identifiers:
+    - type: other
+      value: "arXiv:2605.10444"
+      description: "arXiv e-print"
