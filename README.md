@@ -1,5 +1,7 @@
 # BSA37 MD Configuration Files
 
+[![DOI](https://zenodo.org/badge/1303910511.svg)](https://doi.org/10.5281/zenodo.21690150)
+
 ## Supplementary Material for:
 **"Urea-Mediated Solvent Reorganization of Bovine Serum Albumin in an Acid-Induced Expanded Conformation at pH 3.7"**  
 *Y. Ricardo Espinosa, C. Manuel Carlevaro, and C. Gastón Ferrara*
